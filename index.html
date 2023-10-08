@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        overflow-x: hidden; /* Hide horizontal scrollbar */
+      }
+
+      .section {
+        position: relative;
+        height: 100vh;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        color: white;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+      }
+
+      #section1 {
+        background-image: url("https://img.freepik.com/free-vector/sphere-grid-wave-with-binary-code-ai-artificial-intelligence-logo-hand-machine-learning-concept_127544-855.jpg");
+      }
+
+      #section2 {
+        background-image: url("https://ambrapaliaidata.blob.core.windows.net/ai-storage/articles/Machin_Learning_rwzMjCK.jpg");
+      }
+
+      #section3 {
+        background-image: url("https://www.gopichandrakesan.com/wp-content/uploads/2021/04/Deep-Learning.jpeg");
+      }
+
+      #section4 {
+        background-image: url("https://res.cloudinary.com/practicaldev/image/fetch/s--IQJkz6U8--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/koe14c5pen5742twfhh9.png");
+      }
+
+      /* Style for the content in each section */
+      .content {
+        background: rgba(0, 0, 0, 0.7);
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      /* Style for interactive elements */
+      .interactive {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+
+      /* Hide content initially */
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="section" id="section1">
+      <div class="content">
+        <h1>Artificial Intelligence</h1>
+        <p>
+          Explore the world of Artificial Intelligence and its applications.
+        </p>
+        <div class="hidden">
+          <h2>Definition:</h2>
+          <p>
+            Artificial Intelligence (AI) refers to the simulation of human
+            intelligence in machines that are programmed to think and learn like
+            humans. It encompasses a wide range of technologies and
+            applications.
+          </p>
+          <h2>Motto:</h2>
+          <p>
+            "Creating machines that can reason, learn, and make decisions to
+            enhance our lives."
+          </p>
+        </div>
+        <p class="interactive" onclick="toggleContent(1)">Learn More</p>
+      </div>
+    </div>
+
+    <div class="section" id="section2">
+      <div class="content">
+        <h1>Machine Learning</h1>
+        <p>
+          Dive into the fascinating field of Machine Learning and its
+          algorithms.
+        </p>
+        <div class="hidden">
+          <h2>Definition:</h2>
+          <p>
+            Machine Learning (ML) is a subset of AI that focuses on the
+            development of algorithms and statistical models that enable
+            computers to improve their performance on a specific task through
+            data and experience.
+          </p>
+          <h2>Motto:</h2>
+          <p>
+            "Teaching computers to learn from data and make predictions or
+            decisions without being explicitly programmed."
+          </p>
+        </div>
+        <p class="interactive" onclick="toggleContent(2)">Learn More</p>
+      </div>
+    </div>
+
+    <div class="section" id="section3">
+      <div class="content">
+        <h1>Deep Learning</h1>
+        <p>Discover the power of Deep Learning and neural networks.</p>
+        <div class="hidden">
+          <h2>Definition:</h2>
+          <p>
+            Deep Learning is a subfield of ML that uses artificial neural
+            networks with multiple layers (deep neural networks) to model and
+            solve complex problems, often achieving human-level performance.
+          </p>
+          <h2>Motto:</h2>
+          <p>
+            "Unleashing the potential of deep neural networks to tackle
+            intricate tasks and drive innovation."
+          </p>
+        </div>
+        <p class="interactive" onclick="toggleContent(3)">Learn More</p>
+      </div>
+    </div>
+
+    <div class="section" id="section4">
+      <div class="content">
+        <h1>Natural Language Processing & Computer Vision</h1>
+        <p>
+          Learn about NLP and Computer Vision technologies that enable AI to
+          understand language and images.
+        </p>
+        <div class="hidden">
+          <h2>Definition:</h2>
+          <p>
+            Natural Language Processing (NLP) and Computer Vision are AI
+            subfields. NLP focuses on enabling machines to understand,
+            interpret, and generate human language, while Computer Vision deals
+            with teaching computers to interpret and analyze visual information.
+          </p>
+          <h2>Motto:</h2>
+          <p>
+            "Empowering AI to comprehend human language and the visual world,
+            bridging the gap between machines and humans."
+          </p>
+        </div>
+        <p class="interactive" onclick="toggleContent(4)">Learn More</p>
+      </div>
+    </div>
+
+    <script>
+      function toggleContent(sectionNumber) {
+        const contentDiv = document.querySelector(
+          `#section${sectionNumber} .hidden`
+        );
+        contentDiv.style.display =
+          contentDiv.style.display === "none" ? "block" : "none";
+      }
+    </script>
+  </body>
+</html>
